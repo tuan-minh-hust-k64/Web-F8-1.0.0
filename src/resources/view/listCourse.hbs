@@ -1,0 +1,53 @@
+<div style='padding: 5rem 0' class="container">
+    <div class="course-menu">
+        <ul class="list-menu navbar-nav">
+            <li class="navbar-item  ">
+                <a class="nav-link pl-2 pr-2 active" href="">
+                    Theo lộ trình
+                </a>
+            </li>
+            <li class="navbar-item ">
+                <a class="nav-link pl-2 pr-2" href="">
+                    Phù hợp
+                </a>
+            </li>
+            <li class="navbar-item ">
+                <a class="nav-link pl-2 pr-2" href="">
+                   Mới nhất
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="list-course pt-5">
+        <div class="row">
+            {{#each course}}
+            <div class="col col-lg-4 d-flex">
+                <a class="course d-flex" style="--progress: 93%; flex-direction:column;" href="/courses/{{this.slug}}">
+                    <div class="course-img" style="background-image: url(&quot;https://img.youtube.com/vi/{{this.videoID}}/sddefault.jpg&quot;);"></div>
+                        <div class="course-infor">
+                            <div class="course-infor-title">
+                                <h4>{{this.name}}</h4>
+                            </div>
+                            <div class="course-infor-description">
+                                <span class="">{{this.description}}</span>
+                            </div>
+                            <div class="course-infor-particial">
+                                <span class="oi oi-people"></span>
+                                <span>{{this.number_participants}}</span>
+                            </div>
+                        </div>
+                </a>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        $('.navbar-sub').css('background-color','#000');
+        $('.navbar-sub').css('top',0);
+    })
+</script>

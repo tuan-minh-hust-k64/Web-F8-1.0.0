@@ -1,0 +1,45 @@
+<div style='margin-top: 5rem' class='container'>
+    <form method='post' action='/course/store'>
+        <div class='form-group'>
+            <label for='name'>Name</label>
+            <input type='text' class='form-control' id='name' name='name' />
+        </div>
+        <div class='form-group'>
+            <label for='description'>Description</label>
+            <input
+                type='text'
+                class='form-control'
+                id='description'
+                name='description'
+            />
+        </div>
+        <div class='form-group'>
+            <label for='videoID'>VideoID</label>
+            <input
+                type='text'
+                class='form-control'
+                id='videoID'
+                name='videoID'
+            />
+        </div>
+        <div class='form-group'>
+            <label for='levelCourse'>Level</label>
+            <input
+                type='text'
+                class='form-control'
+                id='levelCourse'
+                name='levelCourse'
+            />
+        </div>
+        <button type='submit' class='btn btn-primary'>Submit</button>
+    </form>
+</div>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded',function(){
+        $('.navbar-sub').css('background-color','#000');
+        $('.navbar-sub').css('top',0);
+    })
+</script>
